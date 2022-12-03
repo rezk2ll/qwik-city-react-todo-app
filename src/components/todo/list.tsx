@@ -22,6 +22,7 @@ export default component$(() => {
         return (
           <div class={'flex flex-row space-x-2 rounded-md w-full'} key={id}>
             <button
+              name='item'
               disabled
               type='button'
               class='h-full flex-grow text-gray-900 bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-3 text-center inline-flex items-center dark:focus:ring-gray-500 mr-2'
@@ -29,6 +30,7 @@ export default component$(() => {
               {value}
             </button>
             <button
+              name='toggle'
               onClick$={() => toggle(id)}
               type='button'
               class='text-blue-700 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center '
@@ -67,6 +69,7 @@ export default component$(() => {
             </button>
             <button
               onClick$={() => remove(id)}
+              name='remove'
               type='button'
               class='text-red-600 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center '
             >

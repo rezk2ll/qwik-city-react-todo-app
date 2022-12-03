@@ -28,6 +28,8 @@ export const Input = (): React.ReactElement => {
   return (
     <div className='flex flex-row space-x-2 w-full justify-center items-center'>
       <input
+        aria-label='todo'
+        placeholder='type something'
         type='text'
         value={content}
         onKeyUp={handleEnter}
@@ -35,6 +37,7 @@ export const Input = (): React.ReactElement => {
         className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
       />
       <button
+        name='add'
         type='button'
         onClick={addTodo}
         className='text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-3 mr-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700'

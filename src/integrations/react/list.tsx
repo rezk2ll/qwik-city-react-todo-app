@@ -12,6 +12,7 @@ export const TodoList = (): React.ReactElement => {
         return (
           <div className={'flex flex-row space-x-2 rounded-md w-full'} key={id}>
             <button
+              name='item'
               disabled
               type='button'
               className='h-full flex-grow text-gray-900 bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-3 text-center inline-flex items-center dark:focus:ring-gray-500 mr-2'
@@ -19,6 +20,7 @@ export const TodoList = (): React.ReactElement => {
               {value}
             </button>
             <button
+              name='toggle'
               onClick={() => toggle(id)}
               type='button'
               className='text-blue-700 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center '
@@ -56,6 +58,7 @@ export const TodoList = (): React.ReactElement => {
               )}
             </button>
             <button
+              name='remove'
               onClick={() => remove(id)}
               type='button'
               className='text-red-600 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center '

@@ -1,4 +1,5 @@
 import { component$, Slot } from '@builder.io/qwik';
+import { DocumentHead } from '@builder.io/qwik-city';
 
 export default component$(() => {
   return (
@@ -21,3 +22,13 @@ export default component$(() => {
     </>
   );
 });
+
+export const head: DocumentHead = {
+  meta: [
+    {
+      key: 'description',
+      name: 'description',
+      content: 'Simple Todo app using Qwik City, React and Valtio'
+    },
+  ],
+};

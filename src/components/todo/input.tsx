@@ -33,6 +33,9 @@ export default component$(() => {
   return (
     <div class='flex flex-row space-x-2 w-full justify-center items-center'>
       <input
+        aria-label='todo'
+        placeholder='type something'
+        name='todo'
         type='text'
         value={content.value}
         onKeyUp$={handleEnter}
@@ -41,6 +44,7 @@ export default component$(() => {
       />
       <button
         type='button'
+        name='add'
         onClick$={addTodo}
         class='text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-3 mr-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700'
       >
